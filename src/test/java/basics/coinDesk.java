@@ -34,7 +34,7 @@ public class coinDesk
 	        assertThat("BPI should contain GBP key", res.jsonPath().getMap("bpi"), hasKey("GBP"));
 	        assertThat("BPI should contain EUR key", res.jsonPath().getMap("bpi"), hasKey("EUR"));
 	        
-	     //2   b.	The GBP ‘description’ equals ‘British Pound Sterling’.
+	     //2   b.The GBP ‘description’ equals ‘British Pound Sterling’.
 	     // Verify that the description of GBP is "British Pound Sterling"
 	        String gbpDescription = res.jsonPath().getString("bpi.GBP.description");
 	        assertThat("GBP description should be 'British Pound Sterling'", gbpDescription, equalTo("British Pound Sterling"));
